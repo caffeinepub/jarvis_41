@@ -1,0 +1,42 @@
+type http_request_result = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type http_header = 
+ record {
+   name: text;
+   value: text;
+ };
+type TransformationOutput = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type TransformationInput = 
+ record {
+   context: blob;
+   response: http_request_result;
+ };
+type Message = 
+ record {
+   role: text;
+   "text": text;
+ };
+type ChatResult = 
+ record {
+   history: vec Message;
+   reply: text;
+ };
+service : {
+  clearConversationHistory: () -> ();
+  getConversationHistory: () -> (vec Message) query;
+  getUserName: () -> (text) query;
+  hasApiKey: () -> (bool) query;
+  saveApiKey: (apiKey: text) -> ();
+  saveUserName: (name: text) -> ();
+  sendMessage: (userMessage: text) -> (ChatResult);
+  transform: (input: TransformationInput) -> (TransformationOutput) query;
+}

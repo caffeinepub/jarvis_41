@@ -1,0 +1,23 @@
+{
+  "overview": "Jarvis is a Hindi voice assistant web app with a sci-fi dark HUD interface. Speak in Hindi, get AI-powered answers read aloud, and remember your name across sessions.",
+  "features": [
+    "Hindi voice input via browser Speech Recognition",
+    "AI responses via OpenAI GPT-4o-mini",
+    "Text-to-Speech Hindi voice output",
+    "Conversation history with chat bubbles",
+    "Floating microphone button",
+    "User name persistence",
+    "Configurable OpenAI API key in settings",
+    "Sci-fi dark HUD aesthetic"
+  ],
+  "category": "tool",
+  "tags": [
+    "voice-assistant",
+    "hindi",
+    "ai",
+    "jarvis",
+    "speech",
+    "openai"
+  ],
+  "last_updated": "2026-04-07T17:27:17.524Z"
+}
